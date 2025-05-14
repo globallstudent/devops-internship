@@ -1,3 +1,7 @@
+# Git submodules for devops-internship
+[submodule "week1_git"]
+	path = week1_git
+	url = git@gitlab.com:zafarsaidov/week1_git.git
 [submodule "week2_gcp"]
 	path = week2_gcp
 	url = https://gitlab.com/globallsudent/week2_gcp.git
