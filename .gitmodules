@@ -1,16 +1,16 @@
 # Git submodules for devops-internship
 [submodule "week1_git"]
 	path = week1_git
-	url = https://gitlab.com/zafarsaidov/week1_git.git
+	url = https://github.com/globallstudent/week1_git.git
 [submodule "week2_gcp"]
 	path = week2_gcp
-	url = https://gitlab.com/globallsudent/week2_gcp.git
+	url = https://github.com/globallstudent/week2_gcp.git
 [submodule "week3_terraform"]
 	path = week3_terraform
-	url = https://gitlab.com/globallstudent/week3_terraform.git
+	url = https://github.com/globallstudent/week3_terraform.git
 [submodule "week4_docker"]
 	path = week4_docker
-	url = https://gitlab.com/globallstudent/week4_docker.git
+	url = https://github.com/globallstudent/week4_docker.git
 [submodule "week5_ansible"]
 	path = week5_ansible
-	url = https://gitlab.com/globallstudent/week5_ansible.git
+	url = https://github.com/globallstudent/week5_ansible.git
