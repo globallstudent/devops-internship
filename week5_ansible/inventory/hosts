@@ -1,0 +1,5 @@
+[runner]
+localhost ansible_connection=local
+
+[app]
+app-server ansible_host=34.56.177.249 ansible_user=ubuntu ansible_port=22 ansible_ssh_private_key_file=/scripts/id_rsa ansible_connection=ssh ansible_become=yes 

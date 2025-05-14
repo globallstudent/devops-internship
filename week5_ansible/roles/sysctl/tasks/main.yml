@@ -1,0 +1,10 @@
+- name: Configure sysctl parameters
+  sysctl:
+    name: "{{ item.key }}"
+    value: "{{ item.value }}"
+    state: present
+    reload: false
+  with_dict: "{{ sysctl_conf | default({}) }}"
+  become: yes
+  ignore_errors: yes
+

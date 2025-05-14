@@ -1,0 +1,6 @@
+- name: Install packages
+  package:
+    name: "{{ package_list | default([]) }}"
+    state: "{{ package_state | default('present') }}"
+  become: yes
+

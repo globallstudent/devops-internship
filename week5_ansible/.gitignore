@@ -1,0 +1,5 @@
+ssh.txt
+local-ansible.cfg
+test_ansible.sh
+validate_ansible.sh
+check_homework.sh

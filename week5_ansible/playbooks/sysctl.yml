@@ -1,0 +1,5 @@
+- hosts: app-server
+  become: yes
+  roles:
+    - sysctl
+

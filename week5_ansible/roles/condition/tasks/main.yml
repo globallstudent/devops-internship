@@ -1,0 +1,19 @@
+- name: Show the message if boolean is true
+  debug:
+    msg: "Boolean is true"
+  when: condition_boolean | bool
+
+- name: Show the message if boolean is false
+  debug:
+    msg: "Boolean is false"
+  when: condition_boolean == false
+
+- name: Show the message if string contains 'devops'
+  debug:
+    msg: "There is devops word inside the string"
+  when: "'devops' in condition_string"
+
+- name: Show the message if number is more than 10
+  debug:
+    msg: "Number is more than ten"
+  when: condition_number | int > 10

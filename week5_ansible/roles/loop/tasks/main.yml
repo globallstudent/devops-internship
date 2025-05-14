@@ -1,0 +1,6 @@
+
+- name: Loop the message
+  debug:
+    msg: "This is an iteration"
+  loop: "{{ range(0, loop_number | int) | list }}"
+

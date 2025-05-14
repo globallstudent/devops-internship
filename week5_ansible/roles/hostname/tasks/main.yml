@@ -1,0 +1,6 @@
+- name: Set the hostname
+  hostname:
+    name: "{{ hostname_set }}"
+  become: yes
+  ignore_errors: yes
+

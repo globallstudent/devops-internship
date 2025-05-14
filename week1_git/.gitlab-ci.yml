@@ -1,0 +1,11 @@
+stages:
+  - test
+
+task_cheking:
+  stage: test
+  script:
+    - /scripts/check_git_tasks.sh $CI_COMMIT_BRANCH $BOT_TOKEN $CHAT_ID
+  tags:
+    - internship
+  except:
+    - main

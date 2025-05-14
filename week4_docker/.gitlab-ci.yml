@@ -1,0 +1,11 @@
+stages:
+  - task_cheking
+
+task_cheking:
+  stage: task_cheking
+  script:
+    - /scripts/check_docker_tasks.sh $CI_COMMIT_BRANCH $R2_API $R2_ACCESS_KEY_ID $R2_SECRET_ACCESS_KEY $CHAT_ID $BOT_TOKEN
+  tags:
+    - internship
+  except:
+    - main

@@ -1,0 +1,26 @@
+services:
+  application:
+    image: globallstudent/python_app:latest
+    ports:
+      - "5000:5000"
+    networks:
+      - default
+      - week4
+
+  postgres:
+    image: globallstudent/database_app:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: moviemaker
+      POSTGRES_PASSWORD: SuPerSeCrETPassWORD
+      POSTGRES_DB: movies
+    networks:
+      - week4
+
+
+networks:
+  default:
+    driver: bridge
+  week4:
+    external: true

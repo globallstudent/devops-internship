@@ -1,0 +1,6 @@
+package_list:
+  - nginx
+  - net-tools
+  - htop
+
+package_state: present

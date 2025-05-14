@@ -1,0 +1,13 @@
+stages:
+  - test
+
+task_cheking:
+  stage: test
+  variables:
+    ANSIBLE_CONFIG: /builds/zafarsaidov/week5_ansible/ansible.cfg
+  script:
+    - /scripts/check_ansible_tasks.sh $CI_COMMIT_BRANCH $CHAT_ID $BOT_TOKEN
+  tags:
+    - internship
+  except:
+    - main

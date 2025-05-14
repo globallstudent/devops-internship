@@ -1,0 +1,4 @@
+- hosts: app-server
+  become: yes
+  roles:
+    - package

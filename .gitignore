@@ -1,0 +1,17 @@
+# Ignore sensitive files
+**/key.json
+**/keys/
+**/*.pem
+**/*.key
+**/*.pub
+
+# Ignore large files
+**/.terraform/
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/.terraform.lock.hcl
+
+# Ignore other sensitive files
+**/.env
+**/credentials.json
+**/service-account.json

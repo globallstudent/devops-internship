@@ -1,0 +1,15 @@
+- name: Create group if it doesn't exist
+  group:
+    name: "{{ user_group | default(user_name) }}"
+    state: "{{ user_state | default('present') }}"
+  become: yes
+  ignore_errors: yes
+
+- name: Create Linux user
+  user:
+    name: "{{ user_name }}"
+    group: "{{ user_group | default(user_name) }}"
+    state: "{{ user_state | default('present') }}"
+    create_home: yes
+  become: yes
+  ignore_errors: yes

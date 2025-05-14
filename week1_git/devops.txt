@@ -1,0 +1,12 @@
+Devops Internship
+Homework: Task 4
+Things done:
+	1. Created new branch: asliddin-abdumannonov
+	2. touch devops.txt
+	3. vim devops.txt # some content
+	4. git add devops.txt # added change to staging are
+	5. git commit -m "commit-to-production-1"
+	6. git checkout -b "new-brach-staging"
+
+Content for simulating merge conflict (resolved)
+
