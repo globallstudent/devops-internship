@@ -1,0 +1,2 @@
+[app-server]
+app-server ansible_connection=ssh ansible_user=ubuntu ansible_host=34.27.80.207 ansible_port=22 ansible_ssh_private_key_file=/scripts/id_rsa

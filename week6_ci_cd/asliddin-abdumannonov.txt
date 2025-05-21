@@ -1,0 +1,2 @@
+user: ubuntu
+ip_address: 34.27.80.207

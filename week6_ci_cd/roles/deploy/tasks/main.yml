@@ -1,0 +1,24 @@
+---
+- name: Pull the latest Docker image
+  docker_image:
+    name: "{{ registry }}/{{ image_name }}"
+    source: pull
+    tag: "{{ image_tag | default('latest') }}"
+  become: yes
+
+- name: Stop and remove existing container if it exists
+  docker_container:
+    name: 2048-game
+    state: absent
+  become: yes
+  ignore_errors: yes
+
+- name: Run the Docker container
+  docker_container:
+    name: 2048-game
+    image: "{{ registry }}/{{ image_name }}:{{ image_tag | default('latest') }}"
+    state: started
+    restart_policy: always
+    published_ports:
+      - "8080:3000"
+  become: yes

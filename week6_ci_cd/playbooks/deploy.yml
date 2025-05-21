@@ -1,0 +1,43 @@
+---
+- name: Run docker image
+  hosts: app-server
+  vars:
+    docker_image: "{{ registry }}/{{ project_name }}:{{ image_tag }}"
+  tasks:
+    - name: Login
+      command: docker login -u "{{ registry }}" -p "{{ registry_password }}"
+      become: yes
+
+    - name: Pull image
+      docker_image:
+        name: "{{ registry }}/{{ project_name }}"
+        tag: "{{ image_tag }}"
+        source: pull
+      become: yes
+
+    - name: Run container
+      docker_container:
+        name: "2048-game"
+        image: "{{ docker_image }}"
+        state: started
+        restart_policy: unless-stopped
+        published_ports:
+          - "8080:3000"
+        recreate: yes
+      become: yes
+
+    - name: Configure nginx for app
+      template:
+        src: ../roles/nginx/templates/app.conf.j2
+        dest: /etc/nginx/sites-available/app.conf
+      become: yes
+      notify:
+        - restart nginx
+
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+        enabled: true
+      become: yes

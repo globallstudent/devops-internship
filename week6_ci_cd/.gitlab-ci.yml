@@ -1,0 +1,52 @@
+stages:
+  - install
+  - build
+  - deploy
+
+before_script:
+  - docker login -u $REGISTRY -p $REGISTRY_PASSWORD
+
+variables:
+  PROJECT_NAME: 2048-asliddin-abdumannonov
+  ANSIBLE_CONFIG: /builds/zafarsaidov/week6_cicd/ansible.cfg
+
+install:
+  stage: install
+  variables:
+    ANSIBLE_CONFIG: /builds/zafarsaidov/week6_cicd/ansible.cfg
+  script:
+    - ansible-playbook -i inventory/hosts playbooks/setup.yml
+  tags:
+    - internship
+  only:
+    - asliddin-abdumannonov
+  when: manual
+
+build:
+  stage: build
+  script:
+    - docker build --no-cache -t $REGISTRY/$PROJECT_NAME:latest ./2048-in-react
+    - docker tag $REGISTRY/$PROJECT_NAME:latest $REGISTRY/$PROJECT_NAME:$CI_PIPELINE_ID
+    - docker push $REGISTRY/$PROJECT_NAME:$CI_PIPELINE_ID
+    - docker push $REGISTRY/$PROJECT_NAME:latest
+    - docker rmi $REGISTRY/$PROJECT_NAME:latest
+    - docker rmi $REGISTRY/$PROJECT_NAME:$CI_PIPELINE_ID
+    - docker image prune -f
+  tags:
+    - internship
+  only:
+    - asliddin-abdumannonov
+
+deploy:
+  stage: deploy
+  script:
+    - |-
+      ansible-playbook -i inventory/hosts -e "registry_password=$REGISTRY_PASSWORD" \
+      -e "registry=$REGISTRY" \
+      -e "project_name=$PROJECT_NAME" \
+      -e "image_tag=$CI_PIPELINE_ID" \
+      playbooks/deploy.yml
+  tags:
+    - internship
+  only:
+    - asliddin-abdumannonov

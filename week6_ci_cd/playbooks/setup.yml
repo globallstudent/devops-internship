@@ -1,0 +1,7 @@
+---
+- name: Setup Docker and Nginx
+  hosts: app-server
+  become: yes
+  roles:
+    - docker
+    - nginx

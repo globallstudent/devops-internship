@@ -1,0 +1,100 @@
+10143  pwd
+10144  lll
+10145  clll
+10146  clear
+10147  wd
+10148  pwd
+10149  ll
+10150  clwar
+10151  clear
+10152  clwar
+10153  clear
+10154  neofetch
+10155  clear
+10156  neofetch
+10157  clear
+10158  pwd
+10159  ll
+10160  clear
+10161  cleawr
+10162  clear
+10163  pwd
+10164  clear
+10165  pwd
+10166  clear
+10167  ll
+10168  clear
+10169  ll
+10170  clear
+10171  cd devops-internship
+10172  ls
+10173  git clone git@gitlab.com:zafarsaidov/week6_cicd.git
+10174  git status
+10175  clear
+10176  cd week6_cicd
+10177  clear
+10178  code .
+10179  /bin/python3 /home/globalstudent/.windsurf/extensions/ms-python.python-2025.4.0-universal/python_files/printEnvVariablesToFile.py /home/globalstudent/.windsurf/extensions/ms-python.python-2025.4.0-universal/python_files/deactivate/zsh/envVars.txt
+10180  sudo apt-get update
+10181  sudo apt-get upgrade windsurf
+10182  clear
+10183  git checkout -b asliddin-abdumannonov
+10184  clear
+10185  cd terraform
+10186  clear
+10187  terraform fmt
+10188  terraform validate
+10189  clear
+10190  terraform plan
+10191  clear
+10192  ..
+10193  clear
+10194  ssh -o StrictHostKeyChecking=no ubuntu@34.27.80.207 -i /home/globalstudent/devops-internship/week6_cicd/id_rsa.pub "echo 'SSH connection successful'"
+10195  git status
+10196  clear
+10197  git commit -m "Add CI/CD pipeline configuration and Ansible setup"
+10198  git push origin asliddin-abdumannonov
+10199  git status
+10200  clear
+10201  git add .
+10202  git commit -m "update"
+10203  git push origin asliddin-abdumannonov
+10204  git status
+10205  git add .
+10206  git commit -m "update"
+10207  git push origin asliddin-abdumannonov
+10208  git add .
+10209  git commit -m "update"
+10210  git status
+10211  clear
+10212  git push origin asliddin-abdumannonov
+10213  git status
+10214  clear
+10215  pwd
+10216  ll
+10217  clear
+10218  git clone --branch ibrokhim-abdullayev https://gitlab.com/zafarsaidov/week6_cicd.git\n
+10219  git clone --branch ibrokhim-abdullayev git@gitlab.com:zafarsaidov/week6_cicd.git\n
+10220  git status
+10221  git add .
+10222  git commit -m "update"
+10223  git push origin asliddin-abdumannonov
+10224  clear
+10225  ls
+10226  clear
+10227  cd 2048-in-react
+10228  ls
+10229  clear
+10230  ll
+10231  npm run dev
+10232  cd 2048-in-react
+10233  clear
+10234  ll
+10235  clear
+10236  npm run dev
+10237  yarn
+10238  celar
+10239  clear
+10240  ls
+10241  clear
+10242  npm start
